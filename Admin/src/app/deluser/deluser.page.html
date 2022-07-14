@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon (click)="back()" name="arrow-back-outline"></ion-icon>
+    <ion-title>deluser</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card *ngFor="let item of data ; index as i" style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;padding: 0px 15px 5px 15px;margin-bottom: 20px;">
+    
+    <ion-item>
+      <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+      <ion-label> {{item.username}}</ion-label>
+      <ion-grid (click)="gostatistics(item.farm_id)" style="display: flex; justify-content: center; align-items:  center;">
+        <ion-icon  style="zoom:1.5; padding-right: 5px;" name="finger-print-outline"></ion-icon>
+        <ion-label>
+          {{item.user_id}}
+        </ion-label>
+      </ion-grid>
+    </ion-item>
+    <ion-grid>
+      <ion-button style="box-shadow: none; border: none;" color="warning"  expand="block" (click)="deluser(item.user_id,item.username)">Delete</ion-button>
+    </ion-grid>
+
+
+  </ion-card>
+</ion-content>

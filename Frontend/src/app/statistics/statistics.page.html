@@ -1,0 +1,78 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-title>
+      <ion-icon style="zoom:1.8;" (click)="backhome()" name="arrow-back-outline"></ion-icon>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card style="box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;padding: 0px 15px 5px 15px;margin-bottom: 20px;">
+    <ion-item>
+      <ion-icon style="zoom:1.5;" name="home-outline" slot="start"></ion-icon>
+      <ion-label>{{data.farm_name}}</ion-label>
+    </ion-item>
+
+    <ion-grid style="display: flex; justify-content: center; align-items:  center;">
+      <ion-label>
+        เลือกวัน
+      </ion-label>
+    </ion-grid>
+    <ion-grid style="display: flex; justify-content: center; align-items:  center;">
+
+      <ion-icon (click)="openCalendar()" style="zoom:2.8;" name="arrow-back-outline" id="open-modal"
+        name="calendar-outline"></ion-icon>
+
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label>
+              อุณหภูมิต่ำสุด {{mintemp}}
+            </ion-label>
+          </ion-item>
+        </ion-col>
+
+        <ion-col>
+          <ion-item>
+            <ion-label>
+              อุณหภูมิสูงสุด {{maxtemp}}
+            </ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label>
+              ความชื้นต่ำสุด {{minhumid}}
+            </ion-label>
+          </ion-item>
+        </ion-col>
+
+        <ion-col>
+          <ion-item>
+            <ion-label>
+              ความชื้นสูงสุด {{maxhumid}}
+            </ion-label>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-card-header>
+      สถิติ {{lineCanvas.data}}
+    </ion-card-header>
+    <ion-card-content>
+      <canvas #lineCanvas style=" height: 360px;"></canvas>
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

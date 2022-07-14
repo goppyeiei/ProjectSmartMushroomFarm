@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-label style="display: flex;">Hi {{userID}}</ion-label>
+
+    <ion-title>
+      User
+    </ion-title>
+    <ion-col (click)="logout()" style="display: flex; justify-content: end; align-items:  end;">
+      <ion-label style="padding: 2%;">
+        ออกจากระบบ
+      </ion-label>
+    </ion-col>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+<div style="align-items: center; justify-content: center; display: flex; margin-top: 100px;">
+  <ion-button (click)="adduser()">Add user</ion-button>
+</div>
+<div style="align-items: center; justify-content: center; display: flex; margin-top: 100px;">
+  <ion-button (click)="deluser()">Delete user</ion-button>
+</div>
+</ion-content>

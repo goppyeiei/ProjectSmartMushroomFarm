@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon (click)="back()" name="arrow-back-outline"></ion-icon>
+    <ion-title>adduser</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-textarea [(ngModel)]="username" required placeholder="Username..."></ion-textarea>
+  </ion-item>
+  <ion-item>
+    <ion-textarea [(ngModel)]="password" required placeholder="Password..."></ion-textarea>
+  </ion-item>
+  <ion-grid>
+    <ion-button style="box-shadow: none; border: none;" color="success"  expand="block" (click)="adduser(user_id)">Add</ion-button>
+  </ion-grid>
+  <ion-label style="align-items: center; justify-content: center; display: flex;"> {{this.data}}</ion-label>
+</ion-content>

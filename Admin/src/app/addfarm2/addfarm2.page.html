@@ -1,0 +1,15 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon (click)="back()" name="arrow-back-outline"></ion-icon>
+    <ion-title>Add farm</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-textarea [(ngModel)]="farm_name" required placeholder="Farm name..."></ion-textarea>
+  </ion-item>
+  <ion-grid>
+    <ion-button style="box-shadow: none; border: none;" color="success"  expand="block" (click)="addfarm(farm_name)">Add</ion-button>
+  </ion-grid>
+</ion-content>
